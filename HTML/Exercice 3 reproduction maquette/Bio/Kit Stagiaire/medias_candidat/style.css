@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Multi-Regular';
+    src: url(fonts\Muli-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ClairHandRegular';
+    src: url(fonts\ClaireHandRegular.otf) format('opentype');
+    font-weight: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: #027e2a;
+    display: flex;
+    padding: 10px 5%;
+    align-items: baseline;
+    justify-content: space-between   
+}
+.logo{
+    display: flex;
+    height: 75px;
+    align-items: center;
+}
+.logo-biomarket{
+    width: 75px;
+}
+.slogan{
+    
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.slogan .title-font{
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+.title-font{
+    font-family: 'clairhand' , cursive;
+}
+.sous-titre{
+    font-size: 1rem;
+    color: #fff;
+    font-family: 'Multi-Regular', sans-serif;
+}
