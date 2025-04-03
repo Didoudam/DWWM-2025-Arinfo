@@ -1,0 +1,40 @@
+@import '_variable.scss';
+@import '_header.scss';
+@import 'accueil-main.scss';
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/fonts/Helvetica.woff2') format('woff2'),
+        url('/fonts/Helvetica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+    
+}
+a{
+    text-decoration: none;
+}
+.black-box{
+    background: $blackcolor;
+}
+.orange-box{
+    background: $orangecolor;
+}
+.white-title{
+    h2{color: $whitecolor;}
+    
+}
+.section-title{
+    @include section-title;
+}
+h3{
+    font-size: 2em;
+}
+.orange-button{
+    @include orange-button
+}

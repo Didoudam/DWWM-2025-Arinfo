@@ -1,0 +1,122 @@
+
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/homme-carton-camionnette.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+
+    .hero-content{
+        margin: 0 0 40px 10%;
+        width: 40%;
+        @media screen and (max-width: 768px){
+            width: 100%;            
+        }
+        h1{
+            @include h1;
+            
+        }
+        div{
+            width: 30vw;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            .black-box{
+                span{
+                    font-size: 1.05em;
+                    font-weight: 700;
+                }
+                padding:20px;
+                flex-direction: column;
+                color: $whitecolor;
+            }
+            .orange-box{
+                span{
+                    font-size: 1.05em;
+                    font-weight: 700;
+                }
+                padding:20px;
+                flex-direction: column;
+                color: $blackcolor;
+            }
+        }
+    }
+}
+.a-propos{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 50vh;
+    @media screen and (max-width:768px) {
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .left-propos-section{
+        min-width: 400px;
+        width: 50%;
+        padding: 10vw;
+        .text-container{
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            h2{
+                @include section-title;
+            }
+            .black-button{
+                @include black-button;
+            }
+        }
+    }
+    .img-container{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        .img-a-propos{
+            width: 100%;
+            
+        }
+    }
+}
+.nos-services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        margin: 40px;
+    }
+
+    .grid-card{
+        width: fit-content;
+        display: grid;
+        grid: auto  auto / 1fr 1fr;
+        gap: 20px;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        .card-txt{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 40px;
+            gap: 12px;
+            @media screen and (max-width:768px){
+                width: 100%;
+            }
+        }
+    }
+    .confiance{
+        max-width:70vw;
+        width: 100%;
+        .confiance-txt{
+            height: 20vh;
+            background: url(images/2hommes-portent-un-meuble.webp);
+        }
+    }
+}

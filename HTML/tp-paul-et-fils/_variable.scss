@@ -1,0 +1,40 @@
+$blackcolor:black;
+$whitecolor:white;
+$orangecolor:#ff5929;
+
+@mixin h1{
+    font-size: 4em;
+    font-weight: 800;
+    color: $whitecolor;
+}
+@mixin section-title{
+    font-size: 3.5em;
+    font-weight: 700;
+}
+@mixin black-button{
+    display: inline-block;
+    padding: 10px 20px;
+    width: fit-content;
+    background: $blackcolor;
+    color: $whitecolor;
+    border: solid 3px $blackcolor;
+    transition: all 0.3s ease;
+    &:hover{
+        background: transparent;
+        color: $blackcolor;
+    }
+}
+@mixin orange-button{
+    display: inline-block;
+    padding: 10px 20px;
+    width: fit-content;
+    background: $orangecolor;
+    color: $blackcolor;
+    border: solid 3px $orangecolor;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    &:hover{
+        background: transparent;
+        color: $blackcolor;
+    }
+}

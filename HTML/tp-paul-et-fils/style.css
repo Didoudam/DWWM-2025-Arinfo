@@ -1,0 +1,247 @@
+header {
+  display: flex;
+  background: black;
+  align-items: center;
+  height: 80px;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  color: #ff5929;
+  font-weight: bold;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  list-style: none;
+  margin: 0 20px;
+}
+header nav ul li .active {
+  color: #ff5929;
+}
+header nav ul li a {
+  color: white;
+}
+header .bck-to-home-logo {
+  margin-left: 20px;
+  color: white;
+  display: flex;
+}
+header .bck-to-home-logo .slogan {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+header .bck-to-home-logo .logo {
+  width: 60px;
+  height: 60px;
+}
+header .devis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background: #ff5929;
+  height: 100%;
+  width: 200px;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/homme-carton-camionnette.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.hero .hero-content {
+  margin: 0 0 40px 10%;
+  width: 40%;
+}
+@media screen and (max-width: 768px) {
+  .hero .hero-content {
+    width: 100%;
+  }
+}
+.hero .hero-content h1 {
+  font-size: 4em;
+  font-weight: 800;
+  color: white;
+}
+.hero .hero-content div {
+  width: 30vw;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+}
+.hero .hero-content div .black-box {
+  padding: 20px;
+  flex-direction: column;
+  color: white;
+}
+.hero .hero-content div .black-box span {
+  font-size: 1.05em;
+  font-weight: 700;
+}
+.hero .hero-content div .orange-box {
+  padding: 20px;
+  flex-direction: column;
+  color: black;
+}
+.hero .hero-content div .orange-box span {
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+.a-propos {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 50vh;
+}
+@media screen and (max-width: 768px) {
+  .a-propos {
+    flex-wrap: wrap;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.a-propos .left-propos-section {
+  min-width: 400px;
+  width: 50%;
+  padding: 10vw;
+}
+.a-propos .left-propos-section .text-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.a-propos .left-propos-section .text-container h2 {
+  font-size: 3.5em;
+  font-weight: 700;
+}
+.a-propos .left-propos-section .text-container .black-button {
+  display: inline-block;
+  padding: 10px 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: black;
+  color: white;
+  border: solid 3px black;
+  transition: all 0.3s ease;
+}
+.a-propos .left-propos-section .text-container .black-button:hover {
+  background: transparent;
+  color: black;
+}
+.a-propos .img-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.a-propos .img-container .img-a-propos {
+  width: 100%;
+}
+
+.nos-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nos-services h2 {
+  margin: 40px;
+}
+.nos-services .grid-card {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: grid;
+  grid: auto auto/1fr 1fr;
+  gap: 20px;
+}
+.nos-services .grid-card img {
+  max-width: 100%;
+  height: auto;
+}
+.nos-services .grid-card .card-txt {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 40px;
+  gap: 12px;
+}
+@media screen and (max-width: 768px) {
+  .nos-services .grid-card .card-txt {
+    width: 100%;
+  }
+}
+.nos-services .confiance {
+  max-width: 70vw;
+  width: 100%;
+}
+.nos-services .confiance .confiance-txt {
+  height: 20vh;
+  background: url(images/2hommes-portent-un-meuble.webp);
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/fonts/Helvetica.woff2") format("woff2"), url("/fonts/Helvetica.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.black-box {
+  background: black;
+}
+
+.orange-box {
+  background: #ff5929;
+}
+
+.white-title h2 {
+  color: white;
+}
+
+.section-title {
+  font-size: 3.5em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+.orange-button {
+  display: inline-block;
+  padding: 10px 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #ff5929;
+  color: black;
+  border: solid 3px #ff5929;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+.orange-button:hover {
+  background: transparent;
+  color: black;
+}/*# sourceMappingURL=style.css.map */

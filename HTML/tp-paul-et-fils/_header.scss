@@ -1,0 +1,55 @@
+
+header{
+    display: flex;
+    background: $blackcolor;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+
+    color: $orangecolor;
+    font-weight: bold;
+    
+    ul{
+        display: flex;
+        li{
+            list-style: none;
+            margin: 0 20px;
+            .active{
+                color: $orangecolor;
+            }
+            a{
+            color: $whitecolor;
+        }
+    }
+    }
+}
+.bck-to-home-logo {
+    margin-left: 20px;
+    color: $whitecolor;
+    display: flex;
+    .slogan {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+}
+    .devis{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:$blackcolor;
+        background: $orangecolor;
+        height: 100%;
+        width: 200px;
+    }
+}
