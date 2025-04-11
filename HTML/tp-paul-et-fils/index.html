@@ -14,16 +14,16 @@
         </div>
         <nav class="nav-bar">
             <ul class="nav-list">
-                <li ><a href="#" class="active">Accueil</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">conseil</a></li>
-                <li><a href="#">Contact</a></li>
+                <li ><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="/apropos.html">A propos</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/nosconseil.html">conseil</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
         <a href="#" class="devis">Devis gratuit</a>
     </header>
-    <main>
+    <main class="index">
         <section class="hero">
             <div class="hero-content">
                 <h1>Déménager n'a jamais été aussi facile</h1>
@@ -41,7 +41,7 @@
         </section>
 
         <section class="a-propos orange-box">
-            <div class=" left-propos-section white-title">
+            <div class=" left-section white-title">
                 <div class="text-container">
                     <h2>Paul et fils<br> Déménagement</h2>
                     <p>Paragraphe. Double cliquez ici ou cliquez sur Modifier texte pour ajouter votre propre text ou changer de police. Décrivez vos services à vos visiteurs.</p>
@@ -92,29 +92,142 @@
                         <a href="" class="orange-button">Lire plus</a>
                     </div>
                 </div>
-
+                <div class="confiance">
+                    <div class="section-title white-title confiance-txt">
+                        <h2>Un service de confiance</h2>
+                    </div>
+                    <div class="qualites">
+                        <div class="small-presentation black-box">
+                            <div class="square-white"></div>
+                            <img src="" alt="" class="icon-qualites">
+                            <h3 class="white-title">Déménagement longue distance</h3>
+                        </div>
+                        <div class="small-presentation orange-box">
+                            <div class="square-white"></div>
+                            <img src="" alt="" class="icon-qualites">
+                            <h3 class="white-title">Assurance sur vos biens</h3>
+                        </div>
+                        <div class="small-presentation white-box">
+                            <div class="square-black"></div>
+                            <img src="" alt="" class="icon-qualites">
+                            <h3>95% de taux de recommandation</h3>
+                        </div>
+                    </div>
             </div>
-            <div class="confiance">
-                <div class="section-title white-title confiance-txt">
-                    <h2>Un service de confiance</h2>
-                </div>
-                <div class="qualites">
-                    <div>
-                        <img src="" alt="" class="icon-qualites">
-                        <h3>Déménagement longue distance</h3>
-                    </div>
-                    <div>
-                        <img src="" alt="" class="icon-qualites">
-                        <h3>assurance de vos biens</h3>
-                    </div>
-                    <div>
-                        <img src="" alt="" class="icon-qualites">
-                        <h3>95% de taux de recommandation</h3>
-                    </div>
-                </div>
             </div>
         </section>
-        </main>
-    <footer></footer>
+        <section class="satisfaction">
+            <h2>Nos clients satisfaits</h2>
+            <div class="carroussel">
+                <div class="arrow arrow-left"></div>
+                <div class="message">
+                    <p>« Je suis un témoignage. Cliquez ici pour me modifier et valoriser votre activité ».</p>
+                    <span><strong>Marie Garnier</strong></span>
+                </div>
+                <div class="arrow arrow-right"></div>
+            </div>
+        </section>
+        <div class="grid-client">
+                <img src="images\logo-a+.JPG" alt="">
+                <img src="images\logo-american-moving.JPG" alt="">
+                <img src="images\logo-california-bestmover.JPG" alt="">
+                <img src="images\logo-golbal-moving.JPG" alt="">
+                <img src="images\logo-movtop.JPG" alt="">
+        </div>
+        <section class="formulaire-devis orange-box">
+            <div class=" left-section">
+                <div class="text-container">
+                    <h2 class="section-title">Votre devis gratuit</h2>
+                    <p>Paragraphe. Cliquez ici pour ajouter votre propre texte et le modifier.</p>
+                </div>
+            </div>
+            <div class="formulaire">
+                <form>
+                    
+                    <div class="entry">
+                    <label for="ville-d">Ville déménagement*</label>
+                    <input type="text" id="ville-d" name="ville-d" required>
+                    </div>
+                    <div class="entry">
+                    <label for="ville-e">Ville emménagement*</label>
+                    <input type="text" id="ville-e" name="ville-e" required>
+                    </div>
+                    <div class="entry">
+                    <label for="date">Date de déménagement*</label>
+                    <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="entry">
+                    <label for="nb-piece">Nombre de pieces*</label>
+                    <input type="number" id="nb-piece" name="nb-piece" required>
+                    </div>
+                    <div class="space"></div>
+                    
+                    <div class="entry">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom">
+                    </div>
+                    <div class="entry">
+                    <label for="tel">Téléphone</label>
+                    <input type="tel" id="tel" name="tel">
+                    </div>
+                    <div class="large-button-container">
+                    <button class="large-button">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="bck-to-home-logo">
+                    <img src="images/logo.png" alt="logo paul et fils" class="logo">
+                    <div class="slogan"><span>Paul<br>et<br>fils</span></div>
+                </div>
+                <p>Numéro de licence : 123-456-7890</p>
+                <div class="legal-info">
+                    <p>© 2023 par Paul et fils.<br> Créé avec Wix.com</p>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <span>CONTACT</span>
+                <div>
+                    <p>Tel : 01 23 45 67 89</p>
+                    <p>E-mail : info@monsite.fr</p>
+                </div>
+                <div>
+                    <p>15 rue du château <br>75001 Paris, France</p>
+                </div>
+            </div>
+            <div class="footer-horaire">
+                <span>HORAIRES D'OUVERTURE</span>
+                <div>
+                    <p>Lun-Ven : 7h - 22h<br>
+                        Samedi : 8h - 22h<br>                        
+                        Dimanche : 8h - 23h</p>
+                </div>
+            </div>
+            <div class="footer-ressources">
+                <span>RESSOURCES</span>
+                    <ul>
+                        <li>Adresses</li>
+                        <li>Conseils</li>
+                        <li>FAQ</li>
+                        <li>Mentions légales</li>
+                        <li>Politique en matière de cookies</li>
+                        <li>Politique de confidentialité</li>
+                        <li>Conditions d’utilisation</li>
+                    </ul>
+                    <div class="logo-reseau">
+                        <img src="images/logo-fb.svg" alt="logo facebook" >
+                        <img src="images/logo-twitter.webp" alt="logo instagram" >
+                        <img src="images/logo-houzz.webp" alt="logo twitter" >
+                        <img src="images/youtube-logo.svg" alt="logo linkedin" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

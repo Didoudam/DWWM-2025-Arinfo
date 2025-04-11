@@ -1,6 +1,10 @@
 @import '_variable.scss';
 @import '_header.scss';
 @import 'accueil-main.scss';
+@import '_apropos.scss';
+@import '_conseil.scss';
+@import 'service.scss';
+@import '_contact.scss';
 
 @font-face {
     font-family: 'Helvetica';
@@ -25,9 +29,11 @@ a{
 .orange-box{
     background: $orangecolor;
 }
+.white-box{
+    background: $whitecolor;
+}
 .white-title{
-    h2{color: $whitecolor;}
-    
+    color: $whitecolor;
 }
 .section-title{
     @include section-title;
@@ -37,4 +43,22 @@ h3{
 }
 .orange-button{
     @include orange-button
+}
+main{background: $whitecolor;}
+.bck-to-home-logo {
+    margin-left: 20px;
+    color: $whitecolor;
+    display: flex;
+    .slogan {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+}
+.white-bg{
+    background: white;
 }

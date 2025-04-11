@@ -1,0 +1,111 @@
+.hero-title{
+    h1{
+        @include h1;
+    }
+}
+.a-propos-hero{ 
+    display: flex;
+    flex-wrap: nowrap;
+    height: fit-content;
+    @media screen and (max-width:768px) {
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .left-section{
+        @include left-section;
+        .text-container{
+            @include text-container-orange-box;
+
+        }
+    }
+}
+.white-container{
+    background: $whitecolor;
+    width: 50%;
+    padding: 20vh;
+    p{
+        width: 100%;
+    }
+}
+.garantie-qualite{
+    h2{
+    text-align: center;
+    margin: 40px 0;
+}
+}
+.grid-card-garantie{
+    width: 100%;
+    display: grid;
+    grid: auto  auto / 1fr 1fr;
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .card-txt{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 40px;
+        gap: 12px;
+        @media screen and (max-width:768px){
+            width: 100%;
+        }
+    }
+    .confiance{
+        grid-column: 1 / 3; // de la colonne 1 à 3 (donc 2 colonnes)
+
+        width: 100%;
+        .garantie-txt{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 30vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) ,url(images/ho——e-porte-carton.webp);
+            background-size: cover;
+            background-position: center;
+            .garantie-txt-content{
+                .text-container{
+                    color:$whitecolor;
+                    width: 50%;
+                }
+            }
+
+        }
+        .garanties{
+            display: grid;
+            grid: auto / 1fr 1fr 1fr 1fr;
+            height: 15vh;
+            .pur-white-box{
+                background: white;
+            }
+            .small-presentation{
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0 20%;
+                text-align: center;
+                .square-white{
+                    background: $whitecolor;
+                    width: 20px;
+                    height: 20px;
+                    box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.384);
+                }
+                .square-black{
+                    background: $blackcolor;
+                    width: 20px;
+                    height: 20px;
+                    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.384);
+                }
+            }
+        }
+    }
+}
+.apropos{
+    .formulaire-devis{
+
+        @include formulaire;}
+    }

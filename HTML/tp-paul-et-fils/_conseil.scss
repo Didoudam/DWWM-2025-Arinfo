@@ -1,0 +1,16 @@
+.basic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 100px 20% 50px 20%; ;
+  .grid-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: fit-content;
+    text-align: center;
+    padding : 50px 20%;
+  }
+}
