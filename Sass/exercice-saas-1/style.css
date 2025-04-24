@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 15vh;
+  background-color: #3498db;
+}
+
+footer {
+  height: 15vh;
+  background-color: #2ecc71;
+}
+
+main .hero .container {
+  padding: 20px;
+}
+main .hero .container h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+main .hero .container p {
+  line-height: 1.6;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .card {
+  border-radius: 10px;
+  padding: calc(10px + 3px);
+  background: #176437;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: calc(5px + 3px);
+  background-color: #31b2a6;
+}/*# sourceMappingURL=style.css.map */

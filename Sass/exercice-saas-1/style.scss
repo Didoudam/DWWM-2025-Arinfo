@@ -1,0 +1,42 @@
+@import "partials/_variables.scss";
+@import "partials/_buttons.scss";
+@import "partials/mixins.scss";
+
+*{
+    margin:0;
+    padding:0;
+}
+header{
+    height: 15vh;
+    background-color: $primary-color;
+}
+footer{
+    height: 15vh;
+    background-color: $secondary-color;
+}
+main{
+    .hero{
+        .container{
+            padding: 20px;
+            h1{
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+            p{
+                line-height: 1.6;
+            }
+        }
+    }
+}
+.box{
+    @include flex-center;
+    .card{
+        @include border-radius(10px);
+        background: darken($secondary-color, 25%);
+
+    }
+}
+.btn{
+    @include border-radius;
+    background-color: mix($primary-color, $secondary-color, 50%);
+}

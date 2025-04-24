@@ -1,0 +1,20 @@
+@mixin button($bgColor, $radius:4px, $text-btn-color) {
+    background-color: $bgColor;
+    border-radius: calc(#{$radius} + 12px);
+    padding: 12px;
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    color: $text-btn-color;
+}
+@mixin screen-size{
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        font-size: 3rem;
+            }
+    @media screen and (min-width: 1024px) {
+        font-size: 5rem;
+    }
+}

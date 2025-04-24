@@ -1,0 +1,20 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$i: 1;
+
+
+$darkTheme:(
+    primary-color: #2c3e50,
+    secondary-color: #8e44ad,
+    text-color: #ecf0f1,
+    background-color: #34495e
+);
+$lightTheme:(
+    primary-color: #3498db,
+    secondary-color: #2ecc71,
+    text-color: #333,
+    background-color: #ecf0f1
+);
+
+$currentTheme:();

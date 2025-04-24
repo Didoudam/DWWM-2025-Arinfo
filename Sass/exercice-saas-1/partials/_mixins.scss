@@ -1,0 +1,9 @@
+@mixin flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+@mixin border-radius($radius: 5px){
+    border-radius: $radius;
+    padding: calc(#{$radius} + 3px);
+}
