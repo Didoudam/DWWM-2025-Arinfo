@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- Section d'en-tête du document HTML avec métadonnées et liens vers les CSS externes -->
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Définit l'encodage des caractères en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Assure la réactivité pour les appareils mobiles -->
+    <title>GreenTech Solutions</title>
+    <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <!-- Lien vers Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Lien vers la feuille de style personnalisée -->
+</head>
+
+<body>
+    <!-- En-tête du site avec barre de navigation fixée en haut (sticky) -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <!-- Barre de navigation Bootstrap avec fond bleu -->
+            <div class="container-fluid justify-content-between">
+                <a class="navbar-brand col-1" href="#"><img src="/assets/logo-éolienne.webp" alt="" class="img-fluid" />
+                    GreenTech Solutions</a>
+                <!-- Logo et nom de l'entreprise -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- Bouton hamburger qui apparaît sur mobile -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <!-- Menu qui se rétracte sur mobile -->
+                    <ul class="navbar-nav mb-2 mb-lg-0 nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#scrollspyHeading1">Accueil</a>
+                            <!-- Lien vers section Accueil -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="#scrollspyHeading2">À propos</a>
+                            <!-- Lien vers section À propos -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#scrollspyHeading3">Services</a>
+                            <!-- Lien vers section Services -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#scrollspyHeading4">Contact</a>
+                            <!-- Lien vers section Contact -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu principal du site -->
+    <main>
+        <!-- Section "hero" (Jumbotron) avec slogan principal -->
+        <section class="jumbotron col-10 m-auto mt-5 bg-secondary text-white rounded-4 p-5" id="scrollspyHeading1">
+            <h1 class="display-1">Nous brassons de l'air</h1>
+            <!-- Titre principal avec style grand format -->
+            <p class="display-6">
+                pour vous chauffer <span class="text-primary fw-bold">sans</span> vous
+                poluer
+            </p>
+            <!-- Sous-titre avec mise en évidence du mot "sans" -->
+            <hr class="my-4" />
+            <!-- Ligne horizontale de séparation -->
+            <p>
+                Spécialiste des énergies renouvelables pres de chez vous, nous vous
+                proposons des solutions innovantes et durables pour réduire votre
+                empreinte carbone. Que ce soit pour l'énergie éolienne, solaire ou
+                hydraulique, nous avons la solution adaptée à vos besoins.
+            </p>
+            <!-- Texte descriptif de l'entreprise -->
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Contactez nous</a>
+                <!-- Bouton d'appel à l'action -->
+            </p>
+        </section>
+
+        <!-- Section présentant les différentes technologies proposées -->
+        <section class="container mt-5 mb-5">
+            <div>
+                <h2 class="text-center">
+                    GreenTech votre partenaire pour un avenir durable
+                </h2>
+            </div>
+            <div class="d-flex flex-column gap-4 container justify-content-center">
+                <div class="container d-flex gap-4">
+                    <!-- Pompes à chaleur -->
+                    <div class="">
+                        <img src="/assets/pexels-alpha-innotec-936418931-20046693.webp"
+                            alt="photo d'une pompe à chaleur" class="img-fluid rounded-4" />
+                        <!-- Image responsive avec coins arrondis -->
+                        <h3>Pompes à chaleur</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, voluptatum.
+                        </p>
+                        <!-- Texte temporaire de remplissage -->
+                    </div>
+                    <!-- Panneaux solaires -->
+                    <div class="">
+                        <img src="/assets/pexels-pixabay-356036.webp" alt="photo d'une pompe à chaleur"
+                            class="img-fluid rounded-4" />
+                        <h3>Panneaux solaires</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, voluptatum.
+                        </p>
+                    </div>
+                </div>
+                <div class="container d-flex gap-4">
+                    <!-- Éoliennes -->
+                    <div>
+                        <img src="/assets/pexels-pixabay-414837.webp" alt="photo d'une pompe à chaleur"
+                            class="img-fluid rounded-4" />
+                        <h3>Eoliennes</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, voluptatum.
+                        </p>
+                    </div>
+                    <!-- Barrages hydroélectriques -->
+                    <div>
+                        <img src="/assets/pexels-tomfisk-9893726.webp" alt="photo d'une pompe à chaleur"
+                            class="img-fluid rounded-4" />
+                        <h3>Barrages hydoélectrique</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, voluptatum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des services proposés avec cartes -->
+        <section class="mt-5 mb-5">
+            <h2 class="text-center">Services</h2>
+            <div class="container d-flex gap-4">
+                <!-- Carte de service 1 -->
+                <article class="card rounded-4 bg-primary text-white border-0">
+                    <img src="/assets/pexels-energepic-com-27411-175039.webp" alt="" class="img-fluid rounded-4" />
+                    <div class="p-2 card-body">
+                        <h3>Entretien</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, voluptatum.
+                        </p>
+                    </div>
+                </article>
+                <!-- Carte de service 2 -->
+                <article class="card rounded-4 bg-primary text-white border-0">
+                    <img src="/assets/pexels-cristian-rojas-8853507.webp" alt=""
+                        class="img-fluid rounded-4 ratio ratio-16x9" />
+                    <div class="p-2 card-body">
+                        <h3>Entretien</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, voluptatum.
+                        </p>
+                    </div>
+                </article>
+                <!-- Carte de service 3 -->
+                <article class="card rounded-4 bg-primary text-white border-0">
+                    <img src="/assets/pexels-mikhail-nilov-7731402.webp" alt="" class="img-fluid rounded-4" />
+                    <div class="p-2 card-body">
+                        <h3>Entretien</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, voluptatum.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="mt-5"></section>
+        <!-- Section vide, probablement pour ajouter un espacement -->
+
+        <!-- Section de contact avec formulaire -->
+        <section class="container">
+            <h2 class="text-center">Contactez-nous</h2>
+            <form>
+                <!-- Champ pour le nom -->
+                <div class="mb-3">
+                    <label for="InputName" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="InputName" />
+                </div>
+                <!-- Champ pour l'email -->
+                <div class="mb-3">
+                    <label for="InputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" />
+                </div>
+                <!-- Zone de texte pour le message -->
+                <div class="mb-3">
+                    <label for="InputMessage" class="form-label">Votre message</label>
+                    <textarea class="form-control" id="InputMessage"></textarea>
+                </div>
+                <!-- Case à cocher pour accepter les conditions -->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="Check1" />
+                    <label class="form-check-label" for="Check1">En cochant cette case, vous acceptez les conditions
+                        générales</label>
+                </div>
+                <!-- Bouton d'envoi -->
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pied de page avec mentions légales -->
+    <footer>
+        <div class="container-fluid bg-primary text-white text-center p-3 mt-5">
+            <p>GreenTech Solutions &copy; 2025</p>
+            <!-- Copyright avec date -->
+            <p>Mentions légales | Politique de confidentialité</p>
+            <!-- Liens légaux -->
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript pour Bootstrap en fin de document pour améliorer les performances de chargement -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+    <!-- Popper.js, requis pour certains composants Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap JavaScript core -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap bundle qui inclut Popper -->
+</body>
+
+</html>

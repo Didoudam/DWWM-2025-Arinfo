@@ -1,0 +1,11 @@
+{
+  "name": "jardinier-dolonne",
+  "version": "1.0.0",
+  "description": "Site web du Jardinier d'Olonne",
+  "scripts": {
+    "sass": "sass --watch style.scss:style.css"
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+} 
