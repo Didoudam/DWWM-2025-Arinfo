@@ -71,8 +71,26 @@ for (let i = 0; i < 21; i+=2){
 }
 
 
-
-for (let i=0; i<4;i++){
     
-        
+let resultat=[];
+    
+for (let randomNumber = Math.floor(Math.random()*1000); resultat.length<3;randomNumber = Math.floor(Math.random()*1000)){
+    if(randomNumber%2==0 && resultat.length<=1){
+        resultat.push(randomNumber);
+    }else if(resultat.length>1 && randomNumber%2!=0){
+        resultat.push(randomNumber);
+    }
 }
+
+
+console.log(resultat);
+
+
+let choixTirage = Math.floor(Math.random()*1000)
+let nombreTirage
+
+for (let i=1, tirage = Math.floor(Math.random()*1000); choixTirage != tirage; i++,tirage = Math.floor(Math.random()*1000)){
+    nombreTirage = i
+}
+
+console.log(nombreTirage);
