@@ -94,3 +94,7 @@ for (let i=1, tirage = Math.floor(Math.random()*1000); choixTirage != tirage; i+
 }
 
 console.log(nombreTirage);
+
+
+let date = new Date()
+console.log(`Aujourd'hui nous somme le ${date.getDate()+ "/"+ (date.getMonth()+1) + "/" +date.getFullYear()} et il est ${date.getHours()}h${date.getMinutes()}min` );

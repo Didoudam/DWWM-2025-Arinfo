@@ -1,0 +1,114 @@
+#chiffres{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    grid-template-rows: auto;
+    width: 70%;
+}
+#calculatrice{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    background: #e8a1a1;
+    border-radius: 16px;
+    box-shadow: 8px 8px 0px #b88080 ;
+}
+#clavierContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#clavier{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+#actionBtn{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+    gap: 5px;
+}
+#actionBtn #egale{
+    background: #a1f692;
+}
+#actionBtn #reset{
+    background: #f69292;
+    border: 2px solid black;
+}
+.btn{
+    width: 100%;
+    border-radius: 8px;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: all 0.3s;
+    box-shadow: 1px 1px 0px ;
+
+}
+.btn:hover{
+    filter: brightness(0.95);
+    box-shadow: inset 1px 1px 0px ;
+
+    
+}
+.chiffre{
+    aspect-ratio: 1 !important;
+    background: #cffcd5;
+    
+}
+.operation{
+    height: 100%;
+    background: #b0d9ef;
+    
+}
+#operations{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30%;
+    min-height: 100%;
+    }
+#ecran{
+    padding: 10px;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    background: #eeeadb;
+    border-radius: 8px;
+    box-shadow: inset 1px 1px 2px;
+}
+#ecranCalcul, #ecranNombre,#screen{
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
+}
+#ecranCalcul{
+    color: #8b8b8b;
+}
+#screen{
+    width: 100%;
+    background: transparent;
+    border: none;
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.mode{
+    background: #d11c1c;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: fit-content;
+    color: white;
+    text-decoration: none;
+}
