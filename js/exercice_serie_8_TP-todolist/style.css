@@ -1,0 +1,151 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-duration: 0.3s;
+}
+body{
+
+    background:url(https://picsum.photos/1920/1080) no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(7px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    
+    font-size: 16vh;
+}
+h1,h2{
+    color: aliceblue;
+}
+.todo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 32px;
+    backdrop-filter: blur(40px);
+    backdrop-filter:invert(30%) ;
+    border-radius: 16px;
+
+}
+.filter{
+    display: flex;
+    justify-content: start;
+    gap: 16px;
+
+}
+.fliter div{
+    display: flex;
+}
+.fade-out{animation: fadeOut 0.3s ease-out !important;}
+.hidden{
+    display: none !important;
+}
+.btn{
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    transition-duration: 0.3s;
+}
+.btn:hover{
+    filter: brightness(70%);
+}
+.filter-btn{
+    background: #10c3ff;
+}
+.input-container{
+    display: flex;
+    margin: 16px 0;
+    gap: 16px;
+}
+#todo-input{
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: solid 2px lightskyblue;
+}
+#domain{
+    border: solid 2px lightskyblue;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(3, 123, 198, 0.798);
+    color: aliceblue;
+}
+#add-btn{
+    width: fit-content;
+    background: #10c3ff;
+}
+#todo-list{
+    margin: 16px 0;
+}
+.task{
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 4px 8px;
+    backdrop-filter: brightness(140%);
+    border-radius: 8px;
+    min-height: 40px;
+    justify-content: space-between;
+    transition-duration: 0.3s;
+    animation: fadeIn 0.3s ease-out;
+    margin: 4px 0;
+}
+.task img{
+    width: 35px;
+    /* filter: invert(100); */
+}
+.task div{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    
+}
+.delete-todo{
+    cursor: pointer;
+}
+#delete-all{
+    display: flex;
+    background: blueviolet;
+    color: aliceblue;
+    width: fit-content;
+    
+}
+.delete-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translatex(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translatex(0) scaleY(1);
+}
+to {
+    opacity: 0;
+    transform: translatex(100px) scaleY(0);
+  }
+}
+.validate span{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.active-filter{
+    filter: brightness(70%);
+}
