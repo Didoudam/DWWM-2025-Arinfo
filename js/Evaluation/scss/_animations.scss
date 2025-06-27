@@ -1,0 +1,51 @@
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+        transform: translateY(0px);
+        visibility: visible;
+        position: relative;
+        ;
+    }
+    100%{
+        position: absolute;
+        transform: translateY(-100px);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes fadein{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+        visibility: hidden;
+        ;
+    }
+    100%{
+        visibility: visible;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes read {
+    0%{
+        transform: translateX(100%);
+        background: #0aae7281;
+        
+    }
+    100%{
+    background: #066b4681;
+        transform: translateX(0);
+    }
+}
+@keyframes unread {
+    0%{
+        transform: translateX(100%);
+        background: #066b4681;
+        
+    }
+    100%{
+        background: #0aae7281;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,318 @@
+/* ===== IMPORTS ===== */
+@import "variables";
+@import "animations";
+@import "checkbox";
+
+/* ===== VARIABLES SCSS ===== */
+
+/* ===== RESET ET BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    /* Police système moderne */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    align-items: center;
+    /* Image de fond avec effet de flou */
+    background: url(../img/fond.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(4px);
+}
+
+/* ===== CLASSES UTILITAIRES ===== */
+.hidden {
+    animation: fadeout 0.5s ease-out forwards;
+}
+
+.add {
+    animation: fadein 0.5s ease-out forwards;
+}
+
+.d-none {
+    display: none !important;
+}
+
+/* ===== COMPOSANTS DE BASE ===== */
+/* Bouton avec effet de pression */
+.btn {
+    cursor: pointer;
+    padding: $padding-small;
+    border-radius: $radius-medium;
+    border: none;
+    transition: all 0.3s;
+    border: $color-border solid $border-medium;
+    box-shadow: $border-thick $border-thick 0 $color-shadow;
+    
+    &:hover {
+        /* Effet de pression au hover */
+        transform: translateX(3px) translateY(2px);
+        box-shadow: 0 0 0 $color-shadow, inset $border-thin $border-thin 0 $color-shadow;
+        filter: brightness(95%);
+    }
+}
+
+/* Champs de saisie */
+input {
+    padding: $padding-small;
+    border-radius: $radius-medium;
+    border: $border-medium solid $color-border;
+}
+
+/* ===== COMPOSANT LIVRE ===== */
+/* Conteneur principal d'un livre */
+.bookenter {
+    height: $height-bookenter;
+    width: fit-content;
+    min-width: $width-min-bookenter;
+    border-radius: $radius-medium;
+    padding: $padding-large;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    
+    /* Section des informations du livre */
+    .info {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: $radius-medium;
+        z-index: 1;
+        align-items: center;
+        
+        /* Indicateur de lecture */
+        .book-read {
+            height: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: $radius-small;
+            backdrop-filter: brightness(110%);
+            padding: $padding-small;
+            border-radius: $radius-small;
+            width: $size-book-read;
+        }
+        
+        /* Informations textuelles du livre */
+        .bookInfo {
+            height: 100%;
+            backdrop-filter: brightness(110%);
+            padding: $padding-small;
+            border-radius: $radius-small;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .book-title {
+                text-transform: capitalize;
+                color: $color-text-primary;
+            }
+            
+            .author {
+                font-weight: 400;
+                text-transform: capitalize;
+                color: $color-text-secondary;
+            }
+        }
+    }
+    
+    /* Section des actions */
+    .actions {
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        
+        #deleteBtn {
+            cursor: pointer;
+            width: $size-delete-btn;
+        }
+    }
+}
+strong{
+    border-bottom: 3px solid $color-secondary;}
+/* Image de fond du livre */
+.bgBook {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: $radius-medium;
+}
+
+/* États de lecture */
+.unread {
+    .bgBook {
+        backdrop-filter: blur(15px);
+        animation: unread 0.4s ease-out forwards;
+    }
+}
+
+.read {
+    .bgBook {
+        backdrop-filter: blur(15px);
+        animation: read 0.4s ease-out forwards;
+    }
+}
+
+/* ===== STYLES D'ERREUR ===== */
+.error-input {
+    border: solid $border-medium $color-secondary !important;
+    box-shadow: 0 0 $radius-medium $color-secondary-transparent;
+}
+
+/* ===== SECTION DE SAISIE ===== */
+#inputBook {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    background: $color-primary-transparent;
+    border: solid $color-border $border-medium;
+    backdrop-filter: blur(15px);
+    height: calc(100vh - 4px);
+    position: sticky;
+    justify-content: center;
+    border-radius: 0 $radius-large $radius-large 0;
+    
+    /* Logo en haut à gauche */
+    .little-logo-container {
+        display: flex;
+        align-items: center;
+        gap: $radius-medium;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        font-weight: 700;
+        backdrop-filter: brightness(90%);
+        border-radius: $radius-large;
+        padding: $padding-medium;
+        
+        .little-logo {
+            width: $size-logo-small;
+        }
+    }
+    
+    /* Formulaire de saisie */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: $radius-medium;
+        
+        label {
+            color: $color-text-white;
+            font-weight: 700;
+        }
+        
+        /* Flèche décorative */
+        #fleche {
+            left: 230px;
+            position: absolute;
+
+            .fleche {
+                width: 15vw;
+                transform: rotate(230deg) scaleX(-1);
+                opacity: 0.7;
+            }
+        }
+    }
+    
+    .input {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Bouton d'ajout */
+    #addBook {
+        background: $color-secondary;
+    }
+}
+
+/* ===== SECTION CENTRALE ===== */
+#middleSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 32px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    
+    /* Section de présentation */
+    #presentation {
+        backdrop-filter: brightness(120%);
+        padding: $padding-xl;
+        border-radius: $radius-large;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        
+        .logo {
+            width: $size-logo;
+        }
+    }
+    
+    /* Section de recherche */
+    #searchSection {
+        backdrop-filter: brightness(120%);
+        padding: $padding-xl;
+        border-radius: $radius-large;
+        display: flex;
+        flex-direction: column;
+        gap: $radius-large;
+        
+        .top {
+            display: flex;
+            gap: $radius-medium;
+            
+            #searchBar {
+                display: flex;
+                flex: 1;
+            }
+            
+            #search {
+                background: $color-primary;
+            }
+        }
+    }
+    
+    /* Section de liste */
+    #listSection {
+        #list {
+            gap: $radius-medium;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+/* ===== SECTION DE PROGRESSION ===== */
+#progressSection {
+    .progress-statue {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    
+    /* Conteneur de la barre de progression */
+    .progress-bar-container {
+        height: $height-progress-bar;
+        width: $width-progress-bar;
+        border: solid $color-border $border-medium;
+        border-radius: $radius-medium;
+        overflow: hidden;
+        
+        .progress-bar {
+            height: 100%;
+            transition: all 0.4s ease;
+        }
+    }
+}

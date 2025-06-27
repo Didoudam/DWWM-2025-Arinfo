@@ -1,0 +1,402 @@
+@charset "UTF-8";
+/* ===== IMPORTS ===== */
+/* Couleurs principales */
+/* Couleurs de texte */
+/* Couleurs de fond et effets */
+/* Rayons de bordure */
+/* Épaisseurs de bordure */
+/* Espacements */
+/* Tailles */
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+    position: relative;
+  }
+  100% {
+    position: absolute;
+    transform: translateY(-100px);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadein {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes read {
+  0% {
+    transform: translateX(100%);
+    background: rgba(10, 174, 114, 0.5058823529);
+  }
+  100% {
+    background: rgba(6, 107, 70, 0.5058823529);
+    transform: translateX(0);
+  }
+}
+@keyframes unread {
+  0% {
+    transform: translateX(100%);
+    background: rgba(6, 107, 70, 0.5058823529);
+  }
+  100% {
+    background: rgba(10, 174, 114, 0.5058823529);
+    transform: translateX(0);
+  }
+}
+.read {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.readLabel {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 16px;
+  padding-bottom: 25px;
+}
+.readLabel::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.readLabel:hover::before {
+  background-color: #e8f5e8;
+  border-color: #4CAF50;
+}
+.readLabel::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  bottom: 4px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.read:checked + .readLabel::before {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+.read:checked + .readLabel::after {
+  opacity: 1;
+}
+
+/* ===== VARIABLES SCSS ===== */
+/* ===== RESET ET BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  /* Police système moderne */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  align-items: center;
+  /* Image de fond avec effet de flou */
+  background: url(../img/fond.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+/* ===== CLASSES UTILITAIRES ===== */
+.hidden {
+  animation: fadeout 0.5s ease-out forwards;
+}
+
+.add {
+  animation: fadein 0.5s ease-out forwards;
+}
+
+.d-none {
+  display: none !important;
+}
+
+/* ===== COMPOSANTS DE BASE ===== */
+/* Bouton avec effet de pression */
+.btn {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s;
+  border: black solid 2px;
+  box-shadow: 3px 3px 0 black;
+}
+.btn:hover {
+  /* Effet de pression au hover */
+  transform: translateX(3px) translateY(2px);
+  box-shadow: 0 0 0 black, inset 1px 1px 0 black;
+  filter: brightness(95%);
+}
+
+/* Champs de saisie */
+input {
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+/* ===== COMPOSANT LIVRE ===== */
+/* Conteneur principal d'un livre */
+.bookenter {
+  height: 60px;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 45dvw;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  /* Section des informations du livre */
+  /* Section des actions */
+}
+.bookenter .info {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  z-index: 1;
+  align-items: center;
+  /* Indicateur de lecture */
+  /* Informations textuelles du livre */
+}
+.bookenter .info .book-read {
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  -webkit-backdrop-filter: brightness(110%);
+          backdrop-filter: brightness(110%);
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: 48px;
+}
+.bookenter .info .bookInfo {
+  height: 100%;
+  -webkit-backdrop-filter: brightness(110%);
+          backdrop-filter: brightness(110%);
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bookenter .info .bookInfo .book-title {
+  text-transform: capitalize;
+  color: black;
+}
+.bookenter .info .bookInfo .author {
+  font-weight: 400;
+  text-transform: capitalize;
+  color: rgb(66, 66, 66);
+}
+.bookenter .actions {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.bookenter .actions #deleteBtn {
+  cursor: pointer;
+  width: 25px;
+}
+
+strong {
+  border-bottom: 3px solid #eda148;
+}
+
+/* Image de fond du livre */
+.bgBook {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border-radius: 8px;
+}
+
+/* États de lecture */
+.unread .bgBook {
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  animation: unread 0.4s ease-out forwards;
+}
+
+.read .bgBook {
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  animation: read 0.4s ease-out forwards;
+}
+
+/* ===== STYLES D'ERREUR ===== */
+.error-input {
+  border: solid 2px #eda148 !important;
+  box-shadow: 0 0 8px rgba(237, 160, 72, 0.4078431373);
+}
+
+/* ===== SECTION DE SAISIE ===== */
+#inputBook {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(10, 174, 114, 0.5058823529);
+  border: solid black 2px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  height: calc(100vh - 4px);
+  position: sticky;
+  justify-content: center;
+  border-radius: 0 16px 16px 0;
+  /* Logo en haut à gauche */
+  /* Formulaire de saisie */
+  /* Bouton d'ajout */
+}
+#inputBook .little-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-weight: 700;
+  -webkit-backdrop-filter: brightness(90%);
+          backdrop-filter: brightness(90%);
+  border-radius: 16px;
+  padding: 8px 16px;
+}
+#inputBook .little-logo-container .little-logo {
+  width: 50px;
+}
+#inputBook form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* Flèche décorative */
+}
+#inputBook form label {
+  color: white;
+  font-weight: 700;
+}
+#inputBook form #fleche {
+  left: 230px;
+  position: absolute;
+}
+#inputBook form #fleche .fleche {
+  width: 15vw;
+  transform: rotate(230deg) scaleX(-1);
+  opacity: 0.7;
+}
+#inputBook .input {
+  display: flex;
+  flex-direction: column;
+}
+#inputBook #addBook {
+  background: #eda148;
+}
+
+/* ===== SECTION CENTRALE ===== */
+#middleSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 32px;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  /* Section de présentation */
+  /* Section de recherche */
+  /* Section de liste */
+}
+#middleSection #presentation {
+  -webkit-backdrop-filter: brightness(120%);
+          backdrop-filter: brightness(120%);
+  padding: 24px 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#middleSection #presentation .logo {
+  width: 200px;
+}
+#middleSection #searchSection {
+  -webkit-backdrop-filter: brightness(120%);
+          backdrop-filter: brightness(120%);
+  padding: 24px 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#middleSection #searchSection .top {
+  display: flex;
+  gap: 8px;
+}
+#middleSection #searchSection .top #searchBar {
+  display: flex;
+  flex: 1;
+}
+#middleSection #searchSection .top #search {
+  background: #0aae72;
+}
+#middleSection #listSection #list {
+  gap: 8px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* ===== SECTION DE PROGRESSION ===== */
+#progressSection {
+  /* Conteneur de la barre de progression */
+}
+#progressSection .progress-statue {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+#progressSection .progress-bar-container {
+  height: 40px;
+  width: 45dvw;
+  border: solid black 2px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+#progressSection .progress-bar-container .progress-bar {
+  height: 100%;
+  transition: all 0.4s ease;
+}/*# sourceMappingURL=style.css.map */

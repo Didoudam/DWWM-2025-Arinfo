@@ -1,0 +1,77 @@
+// Variables pour personnaliser facilement
+$checkbox-size: 15px;
+$checkbox-bg: #eee;
+$checkbox-border: #ddd;
+$checkbox-green: #4CAF50;
+$checkbox-hover-bg: #e8f5e8;
+$animation-duration: 0.4s;
+$transition-duration: 0.3s;
+
+// Cacher la checkbox native
+.read {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+// Container pour la checkbox
+.readLabel {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    padding-bottom: $checkbox-size + 10px;
+
+    // Créer la fausse checkbox
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        // left: 0;
+        height: $checkbox-size;
+        width: $checkbox-size;
+        background-color: $checkbox-bg;
+        border: 2px solid $checkbox-border;
+        border-radius: 4px;
+        transition: all $transition-duration ease;
+    }
+
+    // Au survol
+    &:hover::before {
+        background-color: $checkbox-hover-bg;
+        border-color: $checkbox-green;
+    }
+
+    // Créer la coche avec fade in
+    &::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        bottom: 4px;
+        width: 6px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: opacity $animation-duration ease-in-out;
+    }
+}
+
+// Styles quand la checkbox est cochée
+.read:checked + .readLabel {
+    
+    // Style vert pour la checkbox
+    &::before {
+        background-color: $checkbox-green;
+        border-color: $checkbox-green;
+    }
+
+    // Animation fade in de la coche
+    &::after {
+        opacity: 1;
+    }
+}

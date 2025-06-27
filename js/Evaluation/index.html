@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Métadonnées essentielles -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BookOfBook</title>
+        
+        <!-- Ressources externes -->
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="./scss/style.css" />
+    </head>
+    <body>
+        <!-- ===== SECTION DE SAISIE (PANNEAU LATÉRAL GAUCHE) ===== -->
+        <section id="inputBook">
+            <!-- Logo et titre de l'application -->
+            <div class="little-logo-container">
+                <img
+                    src="./img/logo-livre.png"
+                    alt="logo"
+                    class="little-logo"
+                />
+                <span>BookOfBook</span>
+            </div>
+            
+            <!-- Formulaire d'ajout de livre -->
+            <form>
+                <!-- Champ titre du livre -->
+                <div class="input">
+                    <label for="title">Titre du livre</label>
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Le petit Prince"
+                    />
+                </div>
+                
+                <!-- Champ auteur du livre -->
+                <div class="input">
+                    <label for="author">Auteur</label>
+                    <input
+                        type="text"
+                        id="author"
+                        placeholder="Antoine de St Exupéry"
+                    />
+                </div>
+                
+                <!-- Bouton d'ajout -->
+                <button id="addBook" class="btn bg-primary" type="button">
+                    Ajouter
+                </button>
+                
+                <!-- Flèche décorative pointant vers le centre -->
+                <div id="fleche">
+                    <img src="./img/fleche.png" alt="fleche" class="fleche" />
+                </div>
+            </form>
+            
+            <!-- Message d'erreur (masqué par défaut) -->
+            <span id="errorMsg" class="d-none">
+                Entrez un tritre et un auteur
+            </span>
+        </section>
+
+        <!-- ===== SECTION CENTRALE (CONTENU PRINCIPAL) ===== -->
+        <section id="middleSection">
+            <!-- Section de présentation (affichée au début) -->
+            <div id="presentation">
+                <img src="./img/logo-livre.png" alt="logo" class="logo" />
+                <h1>Enregistrez vos lectures avec BookOfBook</h1>
+                <h3>
+                    Commencez des maintenant, <strong>entrez votre premier livre</strong>
+                </h3>
+            </div>
+            
+            <!-- Section de recherche et filtres (masquée initialement) -->
+            <div id="searchSection" class="hidden">
+                <!-- Barre de recherche -->
+                <div class="top">
+                    <input id="searchBar" type="text" placeholder="Rechercher un livre..." />
+                    <button id="search" class="btn" type="button">
+                        Rechercher
+                    </button>
+                </div>
+                
+                <!-- Boutons de filtrage -->
+                <div>
+                    <!-- Bouton pour afficher tous les livres (masqué par défaut) -->
+                    <button id="showAll" class="d-none btn">Tout voir</button>
+                    
+                    <!-- Bouton pour filtrer les livres non lus -->
+                    <button id="dontRead" class="btn" type="button">
+                        Non lu
+                    </button>
+                </div>
+                
+                <!-- Section d'affichage de la liste des livres -->
+                <div id="listSection">
+                    <!-- Liste qui sera remplie dynamiquement par JavaScript -->
+                    <ul id="list" class="list-unstyled"></ul>
+                </div>
+            </div>
+            
+            <!-- Section de progression de lecture (vide, remplie par JS) -->
+            <div id="progressSection">
+                <!-- Contenu généré dynamiquement pour afficher les statistiques -->
+            </div>
+        </section>
+    </body>
+</html>
