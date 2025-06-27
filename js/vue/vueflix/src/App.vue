@@ -6,26 +6,27 @@ import CategorieRows from './components/CatergorieRow.vue'
 import HeroSection from './components/HeroSection.vue'
 import FilmDetail from './components/FilmDetail.vue'
 
-const selectedFilm=ref({})
-
+const selectedFilm=ref(null)
+// const recherche = ''
 function openDetail(id){
-  
   selectedFilm.value = filmsData.find(film => film.id === id)
   console.log(selectedFilm.value);
 }
+
+function closeDetail(){
+  selectedFilm.value = null
+}
+
 </script>
 <template>
-  <NavBar/>
+  <NavBar v-model:recherche="recherche" />
   <HeroSection :film="filmsData[0]" />
-  <CategorieRows :films="filmsData" @openDetail="openDetail"/>
-  <FilmDetail v-if="selectedFilm.value" :film="selectedFilm.value"/>
+  <CategorieRows :films="filmsData" @openDetail="openDetail" :recherche="recherche"/>
+  <FilmDetail v-if="selectedFilm" :film="selectedFilm" @closeDetail="closeDetail"/>
 </template>
 
-<style scoped>
+<style>
 #app{
-  margin: 0;
-  padding: 0;
-  display: flex;
   flex-direction: column;
 }
 body{

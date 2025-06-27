@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({film:Object})
 const emit = defineEmits('closeDetail')
 </script>
@@ -31,4 +31,4 @@ const emit = defineEmits('closeDetail')
     overflow: hidden;
 }
 
-</style>
+</style> -->
