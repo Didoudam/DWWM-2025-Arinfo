@@ -1,0 +1,174 @@
+@import "_mixins.scss";
+@import "_recettes.scss";
+@import "_recette.scss";
+@import "_header.scss";
+
+:root {
+	--star-size: 15px;
+	--star-color: #fff;
+	--star-background: #fc0;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+	background: rgb(231, 244, 231);
+    min-height: 100dvh;
+}
+
+
+
+#hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+    width: fit-content;
+margin: 16px;
+.hero-logo{
+    width: 300px;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0.5;
+
+}
+h1{
+    text-align: center;
+
+}
+
+}
+
+#recettesPopulaires {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    gap: 16px;
+    padding: 8px 16px;
+	background: rgb(229, 162, 144);
+    border-radius: 24px;
+}
+.recettesPopulaires-container {
+	display: grid;
+	gap: 16px;
+	width: fit-content;
+	@include mobile {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	@include tablet {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include desktop {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+.card {
+	position: relative;
+	text-decoration: none;
+	border: solid 2px black;
+	border-radius: 16px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	height: fit-content;
+	transition: all 0.3s ease-in-out;
+	color: black;
+	&:hover {
+		transform: scale(1.05);
+	}
+	.hero-card {
+		position: relative;
+		img {
+			height: 100%;
+			
+		}
+		.etiquettes {
+			padding: 10px;
+			position: absolute;
+			display: flex;
+			justify-content: space-between;
+			bottom: 6px;
+			right: 6px;
+			z-index: 10;
+			align-items: end;
+			width: 100%;
+			.etoiles {
+				margin-left: 16px;
+			}
+			.etiquette-right {
+				gap: 6px;
+				display: flex;
+				flex-direction: column;
+				align-items: end;
+
+				.easy,
+				.vege {
+					background: rgb(132, 236, 132);
+					padding: 4px 6px;
+					border-radius: 8px;
+					width: fit-content;
+					color: black;
+				}
+			}
+		}
+	}
+	.card-content {
+        backdrop-filter: brightness(0.5);
+        border-radius: 8px;
+        color: #fff;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		padding: 8px;
+		width: 100%;
+		.card-info {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.card-info-time {
+				display: flex;
+				align-items: center;
+				max-width: 50%;
+				width: fit-content;
+				gap: 4px;
+			}
+		}
+	}
+}
+
+.icone {
+	width: 20px;
+    filter: invert(100);
+}
+.etoiles {
+	--percent: calc(var(--rating) / 5 * 100%);
+	display: inline-block;
+	font-size: var(--star-size);
+	font-family: "Times New Roman", Times, serif; // make sure ★ appears correctly
+	line-height: 1;
+
+	&::before {
+		content: "★★★★★";
+		color: transparent;
+		letter-spacing: 3px;
+		background: linear-gradient(
+			90deg,
+			var(--star-background) var(--percent),
+			var(--star-color) var(--percent)
+		);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}

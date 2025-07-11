@@ -1,0 +1,28 @@
+.recherche {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: auto;
+	gap: 16px;
+	form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+		padding: 16px 24px;
+		background: rgb(229, 162, 144);
+		border-radius: 8px;
+		button {
+			padding: 8px 16px;
+			background: rgb(111, 198, 30);
+			border: solid 2px rgb(111, 198, 30);
+			border-radius: 6px;
+			transition: all 0.3s ease;
+			&:hover {
+				border: solid 2px rgb(111, 198, 30);
+				background: rgb(231, 244, 231);
+			}
+		}
+	}
+}

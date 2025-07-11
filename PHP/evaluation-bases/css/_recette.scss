@@ -1,0 +1,73 @@
+#page-recette {
+	display: flex;
+	flex-direction: column;
+
+	margin: 16px;
+	background: rgb(229, 162, 144);
+	padding: 32px;
+	border-radius: 16px;
+	min-width: 50dvw;
+	gap: 16px;
+
+	#recetteHero {
+		position: relative;
+		.hero-img {
+			border-radius: 16px;
+			width: 100%;
+			height: 50dvh;
+			overflow: hidden;
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+		}
+		.hero-info {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			height: 100%;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 8px 16px;
+			.hero-text {
+				display: flex;
+				justify-content: space-between;
+				.bg-green {
+					display: block;
+					background: rgb(132, 236, 132);
+					padding: 4px 6px;
+					border-radius: 8px;
+					width: fit-content;
+				}
+				.bg-dark {
+					display: block;
+					backdrop-filter: brightness(0.5);
+					padding: 4px 6px;
+					border-radius: 8px;
+					width: fit-content;
+				}
+			}
+			h1 {
+				width: fit-content;
+				backdrop-filter: brightness(0.5);
+				border-radius: 8px;
+				padding: 6px 12px;
+				color: #fff;
+			}
+		}
+	}
+	#recette {
+		display: flex;
+		width: 100%;
+		align-items: start;
+		.recette-info {
+			margin: 0 auto;
+			width: fit-content;
+		}
+	}
+}
