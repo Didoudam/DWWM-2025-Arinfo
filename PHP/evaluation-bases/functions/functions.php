@@ -58,12 +58,9 @@ function filtrerRecettes($recettes, $categorie, $difficulte, $vegetarien)
     $elementsFiltres = array_filter($elementsFiltres, function ($item){
         return !empty($item);
     });
-    if (count($elementsFiltres) >1){
+    if (count($elementsFiltres) >0){
         return array_intersect(...$elementsFiltres);
-    }elseif(count($elementsFiltres) === 1){
-        return $elementsFiltres[0];
-    }
-    else{
+    }else{
         return false;
     }
 

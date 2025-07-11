@@ -1,11 +1,15 @@
 #page-recette {
+	margin: 100px 16px 16px 16px;
 	display: flex;
 	flex-direction: column;
 
-	margin: 16px;
-	background: rgb(229, 162, 144);
+	border: 2px solid #cbd3c0;
+	box-shadow: 0 16px 16px rgba(0, 0, 0, 0.174);
+
+	backdrop-filter: blur(30px) brightness(1.3);
+	background: #dcffb14e;
+	border-radius: 32px;
 	padding: 32px;
-	border-radius: 16px;
 	min-width: 50dvw;
 	gap: 16px;
 
@@ -40,13 +44,6 @@
 				.bg-green {
 					display: block;
 					background: rgb(132, 236, 132);
-					padding: 4px 6px;
-					border-radius: 8px;
-					width: fit-content;
-				}
-				.bg-dark {
-					display: block;
-					backdrop-filter: brightness(0.5);
 					padding: 4px 6px;
 					border-radius: 8px;
 					width: fit-content;

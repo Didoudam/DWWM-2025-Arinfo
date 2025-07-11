@@ -4,7 +4,7 @@ $recettes = [
     1 => [
         'id' => 1,
         'nom' => 'Ratatouille Explosive',
-        'image' => 'https://picsum.photos/400/300?random=1',
+        'image' => 'https://images.pexels.com/photos/842545/pexels-photo-842545.jpeg',
         'categories' => 'Plat principal',
         'difficulte' => 'Facile',
         'temps_preparation' => 20,
@@ -38,7 +38,7 @@ $recettes = [
     2 => [
         'id' => 2,
         'nom' => 'Coq au Vin Révolutionnaire',
-        'image' => 'https://picsum.photos/400/300?random=2',
+        'image' => 'https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg',
         'categories' => 'Plat principal',
         'difficulte' => 'Moyen',
         'temps_preparation' => 30,
@@ -72,7 +72,7 @@ $recettes = [
     3 => [
         'id' => 3,
         'nom' => 'Buddha Bowl Anarchiste',
-        'image' => 'https://picsum.photos/400/300?random=3',
+        'image' => 'https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg',
         'categories' => 'Plat principal',
         'difficulte' => 'Facile',
         'temps_preparation' => 15,
@@ -106,7 +106,7 @@ $recettes = [
     4 => [
         'id' => 4,
         'nom' => 'Carbonara Subversive',
-        'image' => 'https://picsum.photos/400/300?random=4',
+        'image' => 'https://images.pexels.com/photos/2098116/pexels-photo-2098116.jpeg',
         'categories' => 'Plat principal',
         'difficulte' => 'Moyen',
         'temps_preparation' => 10,
@@ -138,7 +138,7 @@ $recettes = [
     5 => [
         'id' => 5,
         'nom' => 'Tarte Tatin Rebelle',
-        'image' => 'https://picsum.photos/400/300?random=5',
+        'image' => 'https://images.pexels.com/photos/2133989/pexels-photo-2133989.jpeg',
         'categories' => 'Dessert',
         'difficulte' => 'Difficile',
         'temps_preparation' => 45,
@@ -169,7 +169,7 @@ $recettes = [
     6 => [
         'id' => 6,
         'nom' => 'Curry Rouge Insurrectionnel',
-        'image' => 'https://picsum.photos/400/300?random=6',
+        'image' => 'https://images.pexels.com/photos/1833349/pexels-photo-1833349.jpeg',
         'categories' => 'Plat principal',
         'difficulte' => 'Moyen',
         'temps_preparation' => 25,
@@ -203,7 +203,7 @@ $recettes = [
     7 => [
         'id' => 7,
         'nom' => 'Risotto aux Champignons Clandestins',
-        'image' => 'https://picsum.photos/400/300?random=7',
+        'image' => 'https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg',
         'categories' => 'Plat principal',
         'difficulte' => 'Moyen',
         'temps_preparation' => 20,
@@ -237,7 +237,7 @@ $recettes = [
     8 => [
         'id' => 8,
         'nom' => 'Bœuf Bourguignon Dissident',
-        'image' => 'https://picsum.photos/400/300?random=8',
+        'image' => 'https://images.pexels.com/photos/2122294/pexels-photo-2122294.jpeg',
         'categories' => 'Plat principal',
         'difficulte' => 'Difficile',
         'temps_preparation' => 40,
@@ -271,7 +271,7 @@ $recettes = [
     9 => [
         'id' => 9,
         'nom' => 'Crème Brûlée Pyromane',
-        'image' => 'https://picsum.photos/400/300?random=9',
+        'image' => 'https://images.pexels.com/photos/724291/pexels-photo-724291.jpeg',
         'categories' => 'Dessert',
         'difficulte' => 'Moyen',
         'temps_preparation' => 30,
@@ -301,7 +301,7 @@ $recettes = [
     10 => [
         'id' => 10,
         'nom' => 'Paella Valenciana Contestataire',
-        'image' => 'https://picsum.photos/400/300?random=10',
+        'image' => 'https://images.pexels.com/photos/2116090/pexels-photo-2116090.jpeg',
         'categories' => 'Plat principal',
         'difficulte' => 'Difficile',
         'temps_preparation' => 35,

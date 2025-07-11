@@ -5,9 +5,42 @@ include './functions/functions.php';
 include './includes/header.php';
 ?>
 <section id="hero">
-    <img src="../assets/img/pngtree-cooking-logo-vector-png-image_6697779.png" alt="logo" class="hero-logo">
 
     <h1>Chez l'Alchemist, <br>Nous vous proposons une sélection de <?php echo count($recettes); ?> recettes</h1>
+    <div id="news">
+        <div class="main-new new">
+            <div class="img-container">
+                <img src="https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg" alt="">
+            </div>
+            <div class="news-content">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet illum quia excepturi molestias distinctio nihil vitae aperiam atque, sunt dignissimos delectus explicabo, possimus ullam unde!</p>
+            </div>
+        </div>
+        <div class="secondary-news">
+            <div class="new">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg" alt="">
+                </div>
+                <div class="news-content">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur </p>
+                </div>
+            </div>
+            <div class="new">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg" alt="">
+                </div>
+                <div class="news-content">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
 
 </section>
 <section id="recettesPopulaires">
@@ -19,7 +52,6 @@ include './includes/header.php';
         foreach ($recettesPopulaires as $recette) {
 
             echo '<a href="./recette.php?id=' . $recette['id'] . '" class="card">';
-
             echo '<div class="hero-card">';
             echo '<img src="' . $recette['image'] . '" alt=" photo recette "/>';
             echo '<div class="etiquettes">';
